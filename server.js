@@ -29,6 +29,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to nodejs application.' });
 });
 
+require('./app/routes/tutorial.routes')(app);
 // 8080ポートで受け取り
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
